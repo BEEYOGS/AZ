@@ -1,0 +1,258 @@
+<main class="app-shell">
+  <header class="app-topbar">
+    <a class="brand" href="/" aria-label="Pembuat Template JPEG, beranda">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8 10 4-2.2 4 2.2v4l-4 2.2L8 14v-4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-copy"><strong>Ruang Cetak</strong><small>STUDIO JPEG</small></span>
+    </a>
+    <div class="topbar-actions">
+      <span class="local-badge"><span aria-hidden="true"></span>Privat &amp; diproses lokal</span>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ganti ke tema terang">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.2 15.3A8.3 8.3 0 0 1 8.7 3.8 8.4 8.4 0 1 0 20.2 15.3Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Mode terang</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div>
+      <p class="eyebrow"><span class="eyebrow-line"></span>DESAIN SEKALI, CETAK BANYAK</p>
+      <h1 id="page-title">Buat desain siap cetak.</h1>
+      <p class="intro">Susun kartu, sertifikat, label, atau tiket dari template dan data Anda. Atur desainnya, cek hasil, lalu unduh semua dalam satu ZIP.</p>
+    </div>
+    <div class="hero-tags" aria-label="Format hasil">
+      <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3v6h6M9 14h6m-6 4h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> JPEG</span>
+      <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7V4h3m10 0h3v3m0 10v3h-3M7 20H4v-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg> 300 PPI</span>
+      <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 5 6v5c0 4.7 3 8.3 7 10 4-1.7 7-5.3 7-10V6l-7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Lokal</span>
+    </div>
+  </section>
+
+  <nav class="steps" aria-label="Alur pembuatan">
+    <div class="step is-current"><span class="step-number">01</span><span>Siapkan data</span></div>
+    <span class="step-connector" aria-hidden="true"></span>
+    <div class="step"><span class="step-number">02</span><span>Atur desain</span></div>
+    <span class="step-connector" aria-hidden="true"></span>
+    <div class="step"><span class="step-number">03</span><span>Ekspor JPEG</span></div>
+  </nav>
+
+  <section class="workspace" aria-label="Editor desain">
+    <div class="controls-column">
+      <section class="editor-section" aria-labelledby="source-title">
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div><h2 id="source-title">Mulai dari template</h2><p>Gunakan desain Anda sendiri sebagai latar.</p></div>
+        </div>
+        <div class="field menu-card template-card">
+          <label class="field-label" for="template-file">Gambar template</label>
+          <div class="upload-control">
+            <span class="upload-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.7" stroke="currentColor" stroke-width="1.6"/><path d="m5 17 4.5-4 3.2 2.8 2.2-2 4.1 3.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div class="upload-copy"><strong>Pilih gambar template</strong><span>JPEG, PNG, atau format gambar lain</span></div>
+            <input id="template-file" type="file" accept="image/*" aria-label="Pilih gambar template">
+            <span class="upload-action" aria-hidden="true">Pilih file</span>
+          </div>
+          <p class="hint">Gambar akan disesuaikan ke ukuran halaman tanpa terpotong.</p>
+        </div>
+      </section>
+
+      <section class="editor-section" aria-labelledby="data-title">
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <div><h2 id="data-title">Tentukan isi</h2><p>Masukkan kode berurutan atau ambil data dari Excel.</p></div>
+        </div>
+        <div class="mode-switch" role="group" aria-label="Sumber data">
+          <button id="manual-mode-button" type="button" aria-pressed="true"><span aria-hidden="true">#</span>Nomor otomatis</button>
+          <button id="excel-mode-button" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h14v16H5zM9 4v16m5-16v16M5 9h14m-14 5h14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Impor Excel</button>
+        </div>
+
+        <section id="manual-panel" class="mode-panel" aria-label="Penomoran otomatis">
+          <div class="settings-grid">
+            <div class="field menu-card menu-violet">
+              <label class="field-label" for="sequence-start">Kode awal</label>
+              <input id="sequence-start" type="text" value="A0001" maxlength="30" autocomplete="off" spellcheck="false">
+              <p class="hint">Contoh: A0001, TIKET-001</p>
+            </div>
+            <div class="field menu-card menu-green">
+              <label class="field-label" for="sequence-count">Jumlah hasil</label>
+              <div class="input-with-suffix"><input id="sequence-count" type="number" min="1" max="5000" step="1" value="1"><span>JPEG</span></div>
+              <p class="hint">Maksimal 5.000 file per proses.</p>
+            </div>
+          </div>
+          <p id="sequence-preview" class="sequence-preview" aria-live="polite"></p>
+        </section>
+
+        <section id="excel-panel" class="mode-panel" aria-label="Impor data Excel" hidden>
+          <div class="field menu-card menu-cyan">
+            <label class="field-label" for="excel-file">File spreadsheet</label>
+            <input id="excel-file" type="file" accept=".xlsx,.xls">
+            <p class="hint">Baris pertama menjadi judul kolom. Data diambil dari sheet pertama.</p>
+          </div>
+        </section>
+      </section>
+
+      <section class="editor-section" aria-labelledby="paper-title">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <div><h2 id="paper-title">Atur ukuran hasil</h2><p>Pilih format halaman dan orientasi cetak.</p></div>
+        </div>
+        <div class="settings-grid">
+          <div class="field menu-card menu-orange">
+            <label class="field-label" for="output-size">Ukuran halaman</label>
+            <select id="output-size">
+              <option value="ticket">Tiket 7,6 × 3,9 cm</option><option value="a4">A4</option><option value="legal">Legal</option><option value="letter">Letter</option><option value="id-card">ID Card (CR80)</option><option value="custom">Ukuran khusus</option>
+            </select>
+          </div>
+          <div class="field menu-card menu-blue">
+            <label class="field-label" for="orientation">Orientasi</label>
+            <select id="orientation"><option value="landscape">Landscape</option><option value="portrait">Portrait</option></select>
+          </div>
+        </div>
+        <div class="custom-size" id="custom-size" hidden>
+          <div class="field menu-card menu-cyan"><label class="field-label" for="custom-width">Lebar (cm)</label><input id="custom-width" type="number" min="1" max="60" step="0.1" value="10" aria-label="Lebar manual dalam sentimeter"></div>
+          <div class="field menu-card menu-teal"><label class="field-label" for="custom-height">Tinggi (cm)</label><input id="custom-height" type="number" min="1" max="60" step="0.1" value="7" aria-label="Tinggi manual dalam sentimeter"></div>
+        </div>
+      </section>
+
+      <section class="editor-section" aria-labelledby="design-title">
+        <div class="section-heading">
+          <span class="section-number">04</span>
+          <div><h2 id="design-title">Sesuaikan konten</h2><p>Atur tulisan atau barcode untuk setiap posisi.</p></div>
+        </div>
+        <div class="settings-grid design-grid">
+          <div id="column-field" class="field menu-card menu-violet" hidden>
+            <label class="field-label" id="column-label" for="column-select">Kolom data untuk Posisi 1</label>
+            <select id="column-select" disabled><option value="">Pilih file Excel terlebih dahulu</option></select>
+          </div>
+          <div class="field menu-card menu-violet">
+            <label class="field-label" for="content-type">Jenis konten</label>
+            <select id="content-type"><option value="text">Teks biasa</option><option value="CODE128">Barcode Code 128</option><option value="EAN13">Barcode EAN-13</option></select>
+            <p class="hint" id="content-hint">Kolom ini akan dicetak sebagai teks.</p>
+          </div>
+          <div class="field menu-card menu-orange">
+            <label class="field-label" for="position-count">Jumlah posisi cetak</label>
+            <select id="position-count"><option value="1">1 posisi</option><option value="2" selected>2 posisi</option></select>
+          </div>
+          <div class="field menu-card menu-indigo">
+            <label class="field-label" for="active-position">Atur posisi</label>
+            <select id="active-position"><option value="0">Posisi 1</option><option value="1">Posisi 2</option></select>
+          </div>
+          <div class="field menu-card menu-green">
+            <label class="field-label" for="alignment">Perataan teks</label>
+            <select id="alignment"><option value="center">Tengah</option><option value="left">Kiri</option><option value="right">Kanan</option></select>
+          </div>
+          <div class="field menu-card menu-blue">
+            <label class="field-label" for="font-family">Jenis font</label>
+            <div class="font-picker">
+              <div class="font-combobox">
+                <input id="font-family" type="text" value="Bebas Neue" autocomplete="off" spellcheck="false" aria-label="Jenis font" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="font-options-menu">
+                <button id="font-picker-toggle" class="font-picker-toggle" type="button" aria-label="Tampilkan pilihan font" aria-expanded="false" aria-controls="font-options-menu"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div id="font-options-menu" class="font-options-menu" role="listbox" aria-label="Pilihan font" hidden></div>
+              </div>
+              <datalist id="font-options"><option value="Bebas Neue"></option><option value="Arial"></option><option value="Arial Black"></option><option value="Calibri"></option><option value="Cambria"></option><option value="Comic Sans MS"></option><option value="Courier New"></option><option value="Georgia"></option><option value="Impact"></option><option value="Segoe UI"></option><option value="Tahoma"></option><option value="Times New Roman"></option><option value="Trebuchet MS"></option><option value="Verdana"></option></datalist>
+              <button id="find-fonts-button" class="secondary-button" type="button" title="Cari font yang tersedia di perangkat">Cari font</button>
+            </div>
+            <p class="hint">Pilih saran atau ketik nama font yang terpasang.</p>
+          </div>
+          <div class="field menu-card menu-orange">
+            <label class="field-label" for="text-size">Ukuran tulisan</label>
+            <select id="text-size"><option value="auto">Otomatis menyesuaikan</option><option value="18">Kecil (18 pt)</option><option value="24">Sedang (24 pt)</option><option value="36" selected>Besar (36 pt)</option><option value="48">Sangat besar (48 pt)</option><option value="72">Ekstra besar (72 pt)</option><option value="custom">Manual…</option></select>
+            <div class="field menu-card menu-yellow nested-field" id="custom-text-size-field" hidden><label class="field-label" for="custom-text-size">Ukuran manual (pt)</label><input id="custom-text-size" type="number" min="1" max="300" step="0.5" value="36"></div>
+          </div>
+          <div class="field menu-card menu-violet">
+            <label class="field-label" for="text-weight">Gaya tulisan</label>
+            <select id="text-weight"><option value="400">Regular</option><option value="600">Semibold</option><option value="700">Bold</option><option value="900" selected>Extra bold</option></select>
+            <label class="field-label text-case-label" for="text-case">Kapitalisasi</label>
+            <select id="text-case"><option value="none">Sesuai data</option><option value="uppercase">HURUF BESAR</option><option value="lowercase">huruf kecil</option></select>
+            <div class="text-style-toggles">
+              <label class="style-toggle"><input id="text-italic" type="checkbox"><span><i>Miring</i></span></label>
+              <label class="style-toggle"><input id="text-underline" type="checkbox"><span><u>Garis bawah</u></span></label>
+              <label class="style-toggle"><input id="text-strike" type="checkbox"><span><s>Coret</s></span></label>
+            </div>
+          </div>
+          <div class="field menu-card menu-pink">
+            <label class="field-label">Warna tulisan</label>
+            <div class="custom-color-picker">
+              <button id="color-picker-trigger" class="color-picker-trigger" type="button" aria-label="Pilih warna tulisan" aria-expanded="false" aria-controls="color-picker-popover">
+                <span id="color-picker-swatch" class="color-picker-swatch" aria-hidden="true"></span><span class="color-picker-copy"><strong>Warna tulisan</strong><small id="color-picker-hex-value">#FFFFFF</small></span><svg class="color-picker-chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <input id="text-color" class="color-picker-native" type="color" value="#ffffff" aria-label="Nilai warna tulisan" tabindex="-1">
+              <div id="color-picker-popover" class="color-picker-popover" role="dialog" aria-label="Pilih warna tulisan" hidden>
+                <div id="color-picker-plane" class="color-picker-plane" role="slider" aria-label="Saturasi dan kecerahan" aria-valuemin="0" aria-valuemax="100" tabindex="0"><span id="color-picker-handle" class="color-picker-handle"></span></div>
+                <label class="hue-control"><span>Hue</span><input id="color-picker-hue" type="range" min="0" max="359" value="0" aria-label="Hue warna"></label>
+                <div class="color-picker-fields"><label class="color-hex-field"><span>HEX</span><input id="color-picker-hex" type="text" value="#FFFFFF" maxlength="7" spellcheck="false" autocomplete="off" aria-label="Nilai warna HEX"></label><button id="color-picker-copy" class="color-copy-button" type="button" aria-label="Salin kode warna">Salin</button></div>
+                <div class="color-swatches" role="group" aria-label="Warna pilihan">
+                  <button type="button" data-color="#FFFFFF" aria-label="Putih"></button><button type="button" data-color="#C5F36B" aria-label="Hijau lime"></button><button type="button" data-color="#72D6C9" aria-label="Teal"></button><button type="button" data-color="#7AB8FF" aria-label="Biru"></button><button type="button" data-color="#B59AFF" aria-label="Ungu"></button><button type="button" data-color="#FF99C8" aria-label="Merah muda"></button><button type="button" data-color="#FFA36B" aria-label="Oranye"></button><button type="button" data-color="#FF7777" aria-label="Merah"></button><button type="button" data-color="#1A1D20" aria-label="Hitam"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field menu-card menu-coral">
+            <label class="field-label" for="text-outline-enabled">Outline tulisan</label>
+            <label class="outline-toggle"><input id="text-outline-enabled" type="checkbox"><span class="outline-switch" aria-hidden="true"></span><span>Gunakan outline</span></label>
+            <div class="outline-options" id="text-outline-options" hidden>
+              <label class="field-label" for="text-outline-color">Warna outline</label>
+              <div class="outline-color-control"><input id="text-outline-color" type="color" value="#1a1d20"><span id="text-outline-color-value">#1A1D20</span></div>
+              <label class="field-label outline-width-label" for="text-outline-width">Ketebalan (pt)</label>
+              <input id="text-outline-width" type="number" min="0.1" max="12" step="0.1" value="1.5">
+            </div>
+          </div>
+          <div class="field menu-card menu-teal barcode-setting" id="barcode-height-setting" hidden>
+            <label class="field-label" for="barcode-height">Tinggi barcode</label>
+            <select id="barcode-height"><option value="8">8 mm</option><option value="12" selected>12 mm</option><option value="18">18 mm</option><option value="25">25 mm</option><option value="custom">Manual…</option></select>
+            <div class="field menu-card menu-cyan nested-field" id="custom-barcode-height-field" hidden><label class="field-label" for="custom-barcode-height">Tinggi manual (mm)</label><input id="custom-barcode-height" type="number" min="1" max="100" step="0.5" value="12"></div>
+          </div>
+        </div>
+
+        <section class="placement-panel menu-card menu-coral" aria-label="Pengaturan posisi objek">
+          <div class="placement-heading"><span class="placement-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18m-9-9h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><h3>Penempatan objek</h3><p>Geser titik di pratinjau atau atur lebih presisi di sini.</p></div></div>
+          <div class="placement-grid">
+            <div class="anchor-group">
+              <label class="field-label" id="anchor-label">Titik acuan</label>
+              <div class="anchor-picker" role="radiogroup" aria-labelledby="anchor-label">
+                <button type="button" role="radio" aria-checked="false" data-anchor="0" aria-label="Kiri atas" title="Kiri atas">↖</button><button type="button" role="radio" aria-checked="false" data-anchor="1" aria-label="Tengah atas" title="Tengah atas">↑</button><button type="button" role="radio" aria-checked="false" data-anchor="2" aria-label="Kanan atas" title="Kanan atas">↗</button>
+                <button type="button" role="radio" aria-checked="false" data-anchor="3" aria-label="Kiri tengah" title="Kiri tengah">←</button><button type="button" role="radio" aria-checked="true" data-anchor="4" aria-label="Tengah" title="Tengah">●</button><button type="button" role="radio" aria-checked="false" data-anchor="5" aria-label="Kanan tengah" title="Kanan tengah">→</button>
+                <button type="button" role="radio" aria-checked="false" data-anchor="6" aria-label="Kiri bawah" title="Kiri bawah">↙</button><button type="button" role="radio" aria-checked="false" data-anchor="7" aria-label="Tengah bawah" title="Tengah bawah">↓</button><button type="button" role="radio" aria-checked="false" data-anchor="8" aria-label="Kanan bawah" title="Kanan bawah">↘</button>
+              </div>
+            </div>
+            <div class="placement-controls">
+              <div class="field"><label class="field-label">Offset posisi</label><div class="position-coordinates">
+                <div class="coordinate-control"><span aria-hidden="true">H</span><input id="horizontal-offset" type="number" min="-200" max="200" step="0.1" value="0" aria-label="Offset horizontal"><span>mm</span></div>
+                <div class="coordinate-control"><span aria-hidden="true">V</span><input id="vertical-offset" type="number" min="-200" max="200" step="0.1" value="0" aria-label="Offset vertikal"><span>mm</span></div>
+              </div></div>
+              <div class="field"><label class="field-label" for="rotation">Rotasi</label><select id="rotation"><option value="0">0° — tegak</option><option value="90">90° searah jarum jam</option><option value="180">180°</option><option value="270">90° berlawanan jarum jam</option></select></div>
+            </div>
+          </div>
+        </section>
+        <p class="position-help">Pengaturan tersimpan terpisah untuk setiap posisi cetak.</p>
+      </section>
+    </div>
+
+    <aside class="preview-column" aria-label="Pratinjau dan ekspor">
+      <section class="preview-card">
+        <div class="preview-card-heading">
+          <div><p class="preview-kicker">KANVAS</p><h2>Pratinjau desain</h2></div>
+          <span class="preview-live"><span></span>Live</span>
+        </div>
+        <p class="preview-instructions">Klik atau seret penanda posisi untuk menempatkan tulisan dan barcode.</p>
+        <div class="preview-wrap">
+          <canvas id="preview" class="preview" aria-label="Pratinjau template; klik untuk mengatur posisi tulisan"></canvas>
+        </div>
+        <div class="preview-meta">
+          <span class="meta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7V4h3m10 0h3v3m0 10v3h-3M7 20H4v-3m4-5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="output-spec">JPEG · 300 PPI · satu gambar per nomor atau baris Excel</span>
+        </div>
+        <p class="size-description preview-size" id="size-description"></p>
+      </section>
+
+      <section class="export-card" aria-label="Ekspor hasil">
+        <div class="export-heading"><span class="export-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h2>Siap untuk diekspor?</h2><p>Hasil gambar dikemas rapi dalam ZIP.</p></div></div>
+        <button id="generate-button" class="export-button" type="button" disabled><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Buat JPEG dan unduh ZIP</button>
+        <p id="status" role="status" aria-live="polite"></p>
+        <div class="privacy-note"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 5 6v5c0 4.7 3 8.3 7 10 4-1.7 7-5.3 7-10V6l-7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>File Anda diproses langsung di perangkat ini dan tidak diunggah ke server.</span></div>
+      </section>
+    </aside>
+  </section>
+  <footer class="app-footer"><span class="maker-credit"><span class="maker-credit-dot" aria-hidden="true"></span>MADE BY <strong>YD</strong></span><span>Gambar siap cetak · 300 PPI</span></footer>
+</main>
